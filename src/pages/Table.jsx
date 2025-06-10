@@ -197,7 +197,6 @@ const Table = ({ productList, handleDelete, handleEdit }) => {
               <div className="copyright">
                 2025, made with <i className="fa fa-heart heart text-danger" />{" "}
                 by
-                <a href="https://github.com/Bhargavbhimani229">Bhargav</a>
               </div>
               <div>
                 Distributed by
