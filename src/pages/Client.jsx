@@ -76,7 +76,7 @@ const Client = ({ productList, handleDelete, handleEdit }) => {
       <div className="container-fluid py-5 px-5">
         {/* Header */}
         <div className="text-center mb-5">
-          <h1 className="fw-bold fs-1">Shopping Panel</h1>
+          <h1 className="fw-bold fs-1">🛒 Shopping Panel</h1>
         </div>
 
         {/* Search */}
@@ -87,9 +87,13 @@ const Client = ({ productList, handleDelete, handleEdit }) => {
           />
         </div>
 
-        {/* Filters and Sort */}
-        <div className="row mb-4 align-items-center">
-          <div className="col-lg-8 mb-3 mb-lg-0">
+
+        <div className="col-md-12">
+          <div className="d-flex gap-2">
+            <div className="col-md-4">
+            {/* Filters and Sort */}
+        <div className="mb-4 w-100">
+          <div className="col-lg-8 mb-3 mb-lg-0 w-100">
             <FilterComponent
               productList={productList}
               categoryFilter={categoryFilter}
@@ -102,19 +106,13 @@ const Client = ({ productList, handleDelete, handleEdit }) => {
               setInStockOnly={setInStockOnly}
             />
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 w-100">
             <SortComponent
               sortOption={sortOption}
               setSortOption={setSortOption}
             />
           </div>
         </div>
-
-
-        <div className="col-md-12">
-          <div className="d-flex gap-2">
-            <div className="col-md-4">
-
               {/* Cart */}
               <div className="mb-5">
                 <CartComponent
@@ -124,7 +122,9 @@ const Client = ({ productList, handleDelete, handleEdit }) => {
                 />
               </div>
             </div>
-            <div className="col-md-8">
+
+            {/* Product Card */}
+            <div className="col-md-8 scrollBar" style={{ maxHeight: "80vh", overflowY: "auto",scrollbarWidth:"none", }}>
               <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
                 {/* Sorted Product */}

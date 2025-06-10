@@ -17,8 +17,9 @@ const FilterComponent = ({
 
   return (
     <div className="mb-3">
-      <div className="row g-2">
-        <div className="col-md-3">
+      <div className="">
+        <div className="col-md-3 w-100 mb-3">
+          <small className="text-muted">Category</small>
           <select
             className="form-select"
             value={categoryFilter}
@@ -30,9 +31,10 @@ const FilterComponent = ({
               </option>
             ))}
           </select>
-          <small className="text-muted">Category</small>
+          
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 w-100 mb-3">
+          <small className="text-muted">Brand</small>
           <select
             className="form-select"
             value={brandFilter}
@@ -44,9 +46,10 @@ const FilterComponent = ({
               </option>
             ))}
           </select>
-          <small className="text-muted">Brand</small>
+          
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 w-100 mb-4">
+          <small className="text-muted">Minimum Rating</small>
           <select
             className="form-select"
             value={ratingFilter}
@@ -59,9 +62,9 @@ const FilterComponent = ({
             <option value={4}>4 stars & above</option>
             <option value={5}>5 stars</option>
           </select>
-          <small className="text-muted">Minimum Rating</small>
+          
         </div>
-        <div className="col-md-3 d-flex align-items-center">
+        {/* <div className="col-md-3 w-100 d-flex">
           <input
             type="checkbox"
             id="stockCheck"
@@ -72,7 +75,7 @@ const FilterComponent = ({
           <label htmlFor="stockCheck" className="form-check-label">
             In Stock Only
           </label>
-        </div>
+        </div> */}
       </div>
     </div>
   );

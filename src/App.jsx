@@ -16,7 +16,7 @@ const App = () => {
   const imageRef = useRef(null);
   const navigator = useNavigate();
 
-  const URL = "http://localhost:3000/Product";
+  const URL = "http://localhost:5001/Product";
 
   useEffect(() => {
     axios
@@ -89,7 +89,6 @@ const App = () => {
       setError({});
       imageRef.current.value = "";
       setEdit(0);
-      navigator("/client")
     } catch (err) {
       console.error("Submit error:", err);
     }
@@ -121,7 +120,17 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Client
+              productList={productList}
+              handleDelete={handleDelete}
+              handleEdit={handleEdit}
+            />
+          }
+        />
+        <Route path="/home" element={<Home />} />
         <Route
           path="/form"
           element={
@@ -145,16 +154,7 @@ const App = () => {
             />
           }
         />
-        <Route
-          path="/client"
-          element={
-            <Client
-              productList={productList}
-              handleDelete={handleDelete}
-              handleEdit={handleEdit}
-            />
-          }
-        />
+        
 
         
         
