@@ -90,6 +90,7 @@ const App = () => {
       setError({});
       imageRef.current.value = "";
       setEdit(0);
+      navigator("/client")
     } catch (err) {
       console.error("Submit error:", err);
     }
