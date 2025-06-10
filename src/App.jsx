@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Form from "./pages/Form";
 import Table from "./pages/Table";
 import Client from "./pages/Client";
+import Login from "./pages/Login";
 
 const App = () => {
   const [product, setProduct] = useState({});
@@ -119,9 +120,11 @@ const App = () => {
 
   return (
     <>
+    
       <Routes>
+        <Route path="/" element={<Login/>}/>
         <Route
-          path="/"
+          path="/client"
           element={
             <Client
               productList={productList}

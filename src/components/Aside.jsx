@@ -86,7 +86,7 @@ const Aside = () => {
                   </div>
                 </li>
                 <li className='nav-item'>
-                  <Link to="/">
+                  <Link to="/client">
                     <i className="fas fa-table" />
                     <p>Client</p>
                   </Link>
