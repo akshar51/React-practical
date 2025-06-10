@@ -124,7 +124,7 @@ const Client = ({ productList, handleDelete, handleEdit }) => {
             </div>
 
             {/* Product Card */}
-            <div className="col-md-8 scrollBar" style={{ maxHeight: "80vh", overflowY: "auto",scrollbarWidth:"none", }}>
+            <div className="col-md-8 scrollBar p-3" style={{ maxHeight: "80vh", overflowY: "auto",scrollbarWidth:"none", }}>
               <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
                 {/* Sorted Product */}
