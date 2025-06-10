@@ -76,7 +76,7 @@ const Client = ({ productList, handleDelete, handleEdit }) => {
       <div className="container-fluid py-5 px-5">
         {/* Header */}
         <div className="text-center mb-5">
-          <h1 className="fw-bold fs-1">Shopping</h1>
+          <h1 className="fw-bold fs-1">Shopping Panel</h1>
         </div>
 
         {/* Search */}
