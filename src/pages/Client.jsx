@@ -4,7 +4,8 @@ import SortComponent from "../components/SortComponent";
 import SearchComponent from "../components/SearchComponent";
 import CartComponent from "../components/CartComponent";
 import ProductCard from "../components/ProductCard";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 const Client = ({ productList, handleDelete, handleEdit }) => {
   const [searchText, setSearchText] = useState("");
@@ -66,8 +67,11 @@ const Client = ({ productList, handleDelete, handleEdit }) => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <div className="ms-auto">
-            <button className="btn btn-light fw-semibold">
+            <button className="btn btn-light fw-semibold me-4">
               🛒 Cart ({totalItems})
+            </button>
+            <button className="btn btn-light fw-semibold">
+              <Link to="/home">Admin <FaArrowRight /></Link>
             </button>
           </div>
         </div>
