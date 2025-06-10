@@ -85,6 +85,12 @@ const Aside = () => {
                     </ul>
                   </div>
                 </li>
+                <li className='nav-item'>
+                  <Link to="/client">
+                    <i className="fas fa-table" />
+                    <p>Client</p>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
